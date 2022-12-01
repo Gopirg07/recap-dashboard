@@ -1,0 +1,144 @@
+
+body{
+  background-color: #eff1f9;
+  padding: 20px;
+  font-family:"Roboto" , sans-serif;
+}
+.Summarybox-container{
+  background-color: white; 
+  padding: 15px;
+ }
+.text-icon{
+  display: flex;
+  justify-content: space-between;
+ }
+
+.Summarybox-text{
+  color: #596882;
+  margin: 0px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.Summarybox-number{
+  color: #334151;
+  margin: 0px;
+  margin-bottom: 8px;
+  font-weight: 500;
+
+} 
+
+
+.Summarybox-direction{
+  margin: 0px;
+  margin-bottom: px;
+}
+
+.Summarybox-percent{
+  margin: 0px 0px 0px 4px; 
+  font-size: 14px; 
+  color: #99a6b7;
+}
+
+.Summarybox-month{
+  margin: 0px; 
+  font-size: 14px;
+  color: #99a6b7;
+}
+.month-per{
+  margin-top: 10px;
+}
+.month-per,.dir-per{
+  display: flex;
+  justify-content: space-between;
+} 
+
+
+.Summarybox-list{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media(min-width:500px) {
+  .Summarybox-list{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width:1200px) {
+  .Summarybox-list{
+    grid-template-columns: repeat(4, 1fr);
+
+  }
+}
+.month-overview{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+} 
+@media(min-width:1199px) {
+  .month-overview{
+    grid-template-columns: 2.7fr 1.3fr;
+
+  }
+}
+
+
+.monthly-profits{ 
+  background-color: white; 
+  padding: 20px;
+  margin-top: 10px;
+}
+.monthly-profits-name{
+  color: #334151;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0px; 
+  margin-bottom: 4px;
+}
+.monthly-profits-text{ 
+  font-size: 14px;
+  margin: 0px;   
+  margin-bottom: 16px; 
+  color: #99a6b7;
+}
+.monthly-profits-number{ 
+  color: #334151;
+  margin: 0px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.this-per{
+  display: flex;
+  justify-content: space-between;
+}
+.monthly-profits-this{ 
+  margin: 0px; 
+  font-size: 14px;
+  color: #99a6b7; 
+} 
+.monthly-profits-this-per{
+  margin: 0px; 
+  font-size: 14px;
+}
+.monthly-profits-last{
+  margin: 0px;
+}
+.Monthly-progress{
+  margin-top: 4px;
+}
+.monthly-profits-last-this{
+  margin-bottom: 16px;
+}
+
+.Overview-container{
+  background-color: white; 
+  margin-top: 10px;
+  padding: 15px;
+}
+.Overview-spec{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
