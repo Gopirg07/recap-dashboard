@@ -41,25 +41,6 @@ function Dashboard(){
     
   );
 }
-function Overview(){
-  const Monthlabels = ["January", "February", "March", "April", "May", "June", "July"]; 
-  const Yearlabels=[2016,2017,2018,2019,2020,2021,2022]
-  
-  const [time, setTime] = React.useState('month');
-  return(
-    <div className='Overview-container'>
-      <div className='Overview-spec'>
-        <div> 
-          <p className='monthly-profits-name'>Overview of Sales Win/Lost</p>
-          <p className='monthly-profits-text'>Comapred to last month sales.</p>
-        </div>
-        <ColorToggleButton time={time} setTime={setTime}/>
-      </div>
-
-      <StackedChart labels={ time=="month" ? Monthlabels : Yearlabels}/>
-    </div>
-  );
-}
 
 function  Details(){
   const dataList = [
@@ -149,6 +130,26 @@ function Summarybox({details}){
   );
 }
 
+function Overview(){
+  const Monthlabels = ["January", "February", "March", "April", "May", "June", "July"]; 
+  const Yearlabels=[2016,2017,2018,2019,2020,2021,2022]
+  
+  const [time, setTime] = React.useState('month');
+  return(
+    <div className='Overview-container'>
+      <div className='Overview-spec'>
+        <div> 
+          <p className='monthly-profits-name'>Overview of Sales Win/Lost</p>
+          <p className='monthly-profits-text'>Comapred to last month sales.</p>
+        </div>
+        <ColorToggleButton time={time} setTime={setTime}/>
+      </div>
+
+      <StackedChart labels={ time=="month" ? Monthlabels : Yearlabels}/>
+    </div>
+  );
+}
+
 const MonthlyProfits1 = styled(LinearProgress)(({ linecolor }) => ({
   height:5, 
   [`&.${linearProgressClasses.colorPrimary}`]: {
@@ -184,6 +185,7 @@ function Monthlyprofits(){
     </div>
   );
 }
+
 function Percentprogress({dets}){
   return(
       <div className='monthly-profits-last-this'>
